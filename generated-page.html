@@ -1,0 +1,276 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Nike Air Zoom Pegasus 39</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-white text-neutral-900 selection:bg-black selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="flex items-center justify-between px-6 lg:px-12 py-4 border-b border-neutral-200 backdrop-blur-md sticky top-0 z-20">
+    <div class="text-xl font-semibold tracking-tight">N</div>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#" class="hover:text-neutral-500 transition-colors">Men</a>
+      <a href="#" class="hover:text-neutral-500 transition-colors">Women</a>
+      <a href="#" class="hover:text-neutral-500 transition-colors">Kids</a>
+    </nav>
+    <div class="flex gap-4">
+      <button aria-label="Wishlist" class="relative p-2 rounded-full hover:bg-neutral-100 transition-colors">
+        <i data-lucide="heart" stroke-width="1.5" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Cart -->
+      <button id="openCart" aria-label="Cart" class="relative p-2 rounded-full hover:bg-neutral-100 transition-colors">
+        <i data-lucide="shopping-cart" stroke-width="1.5" class="w-5 h-5"></i>
+        <span id="cartCount" class="absolute -top-1 -right-1 inline-flex items-center justify-center w-4 h-4 text-[10px] bg-black text-white rounded-full hidden">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="grid lg:grid-cols-2 gap-12 px-6 lg:px-24 pt-16 pb-24 overflow-hidden">
+    <!-- Text -->
+    <div class="flex flex-col justify-center order-2 lg:order-1 space-y-6 reveal">
+      <h1 class="text-4xl lg:text-5xl font-semibold tracking-tight">Nike Air Zoom Pegasus&nbsp;39</h1>
+      <p class="text-neutral-600">
+        Built for the everyday runner, the Pegasus 39 brings extra bounce to your stride with
+        lightweight cushioning and a secure, breathable fit.
+      </p>
+
+      <!-- Rating -->
+      <div class="flex items-center gap-4">
+        <div class="flex text-yellow-500">
+          <i data-lucide="star" stroke-width="1.5" class="w-5 h-5 fill-yellow-500"></i>
+          <i data-lucide="star" stroke-width="1.5" class="w-5 h-5 fill-yellow-500"></i>
+          <i data-lucide="star" stroke-width="1.5" class="w-5 h-5 fill-yellow-500"></i>
+          <i data-lucide="star" stroke-width="1.5" class="w-5 h-5 fill-yellow-500"></i>
+          <i data-lucide="star-half" stroke-width="1.5" class="w-5 h-5 fill-yellow-500"></i>
+        </div>
+        <span class="text-sm text-neutral-500">(4.5/5 – 3,127 reviews)</span>
+      </div>
+
+      <!-- Sizes -->
+      <div>
+        <h2 class="text-sm font-medium mb-2">Select Size (US)</h2>
+        <div id="sizes" class="grid grid-cols-6 gap-2 max-w-xs"></div>
+      </div>
+
+      <!-- Price & CTA -->
+      <div class="flex items-center gap-6">
+        <div class="text-3xl font-semibold tracking-tight">$130</div>
+        <button id="addToCart" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-md hover:bg-neutral-800 transition-colors outline-neutral-300 focus:outline">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="relative order-1 lg:order-2 flex items-center justify-center reveal">
+      <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&amp;q=80" alt="Nike Air Zoom Pegasus 39" class="w-full max-w-xl object-contain drop-shadow-xl rounded-lg">
+    </div>
+  </section>
+
+  <!-- PERFORMANCE CHART -->
+  <section class="px-6 lg:px-24 pb-24 reveal">
+    <h2 class="text-2xl font-semibold tracking-tight">Performance Breakdown</h2>
+    <p class="text-neutral-600 mb-4 max-w-2xl">
+      Tested by professional athletes and everyday runners, the Pegasus 39 scores high across the most important categories.
+    </p>
+    <div class="max-w-md border border-neutral-200 rounded-lg p-6">
+      <div>
+        <canvas id="radarChart" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="px-6 lg:px-24 pb-32 space-y-8 reveal">
+    <h2 class="text-2xl font-semibold tracking-tight">Product Details</h2>
+    <div class="grid md:grid-cols-2 gap-8 text-neutral-700 text-sm leading-6">
+      <ul class="space-y-2 list-disc list-inside">
+        <li>Engineered mesh upper enhances breathability.</li>
+        <li>Zoom Air units in forefoot and heel for responsive cushioning.</li>
+        <li>Flywire technology integrates with laces for secure midfoot lockdown.</li>
+      </ul>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>Durable rubber outsole with waffle pattern for traction.</li>
+        <li>Weight: 283g (Men’s size 9).</li>
+        <li>Heel-to-toe drop: 10 mm.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-neutral-200 px-6 lg:px-24 py-12 text-sm text-neutral-500">
+    <div class="flex flex-col md:flex-row md:justify-between gap-6 md:items-center">
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-neutral-900 transition-colors">Privacy&nbsp;Policy</a>
+        <a href="#" class="hover:text-neutral-900 transition-colors">Terms&nbsp;of&nbsp;Use</a>
+        <a href="#" class="hover:text-neutral-900 transition-colors">Support</a>
+      </div>
+      <p>© 2023 Nike, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- CART PANEL -->
+  <div id="cartPanel" class="fixed inset-0 z-40 hidden">
+    <!-- overlay -->
+    <div id="cartOverlay" class="absolute inset-0 bg-black/40"></div>
+    <!-- drawer -->
+    <aside class="absolute right-0 top-0 h-full w-80 bg-white flex flex-col shadow-xl">
+      <header class="flex items-center justify-between p-6 border-b border-neutral-200">
+        <h3 class="text-lg font-semibold tracking-tight">Your Cart</h3>
+        <button id="closeCart" aria-label="Close cart" class="p-1 rounded hover:bg-neutral-100 transition-colors">
+          <i data-lucide="x" stroke-width="1.5" class="w-5 h-5"></i>
+        </button>
+      </header>
+      <ul id="cartItems" class="flex-1 overflow-y-auto divide-y divide-neutral-200"></ul>
+      <footer class="border-t border-neutral-200 p-6 space-y-4">
+        <div class="flex items-center justify-between text-sm">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="font-medium">$0</span>
+        </div>
+        <button class="w-full py-3 bg-black text-white text-sm font-medium rounded-md hover:bg-neutral-800 transition-colors">
+          Checkout
+        </button>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    // Size buttons
+    const sizes = [6, 7, 8, 9, 10, 11];
+    const sizeContainer = document.getElementById('sizes');
+    let selectedSize = null;
+
+    sizes.forEach(size => {
+      const btn = document.createElement('button');
+      btn.textContent = size;
+      btn.className =
+        'py-2 text-sm font-medium border border-neutral-200 rounded-md hover:bg-neutral-50 transition-colors';
+      btn.onclick = () => {
+        selectedSize = size;
+        [...sizeContainer.children].forEach(c => c.classList.remove('ring-2', 'ring-neutral-900'));
+        btn.classList.add('ring-2', 'ring-neutral-900');
+      };
+      sizeContainer.appendChild(btn);
+    });
+
+    // Cart logic
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartBadge = document.getElementById('cartCount');
+    const cartSubtotalEl = document.getElementById('cartSubtotal');
+    const PRICE = 130;
+    let cartCount = 0;
+    const cartData = [];
+
+    function renderCart() {
+      cartItemsEl.innerHTML = '';
+      cartData.forEach((item, idx) => {
+        const li = document.createElement('li');
+        li.className = 'flex items-center justify-between gap-4 p-4 text-sm';
+        li.innerHTML = `
+          <div>
+            <p class="font-medium">Air Zoom Pegasus 39</p>
+            <p class="text-neutral-500">Size US ${item.size}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span>$${PRICE}</span>
+            <button data-index="${idx}" class="removeItem p-1 rounded hover:bg-neutral-100 transition-colors" aria-label="Remove item">
+              <i data-lucide="trash-2" stroke-width="1.5" class="w-4 h-4"></i>
+            </button>
+          </div>`;
+        cartItemsEl.appendChild(li);
+      });
+      cartSubtotalEl.textContent = `$${(cartData.length * PRICE).toFixed(2)}`;
+      lucide.createIcons();
+    }
+
+    document.getElementById('addToCart').onclick = () => {
+      if (!selectedSize) {
+        alert('Please select a size before adding to cart.');
+        return;
+      }
+      cartCount += 1;
+      cartBadge.textContent = cartCount;
+      cartBadge.classList.remove('hidden');
+      cartData.push({ size: selectedSize });
+      renderCart();
+      document.getElementById('cartPanel').classList.remove('hidden');
+    };
+
+    // Open / close cart
+    document.getElementById('openCart').onclick = () => {
+      document.getElementById('cartPanel').classList.remove('hidden');
+    };
+    document.getElementById('closeCart').onclick =
+      document.getElementById('cartOverlay').onclick = () => {
+        document.getElementById('cartPanel').classList.add('hidden');
+    };
+
+    // Delegated remove handler
+    cartItemsEl.addEventListener('click', e => {
+      if (e.target.closest('.removeItem')) {
+        const idx = +e.target.closest('.removeItem').dataset.index;
+        cartData.splice(idx, 1);
+        cartCount -= 1;
+        if (cartCount === 0) cartBadge.classList.add('hidden');
+        cartBadge.textContent = cartCount;
+        renderCart();
+      }
+    });
+
+    // Radar chart
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Cushioning', 'Responsiveness', 'Durability', 'Grip', 'Breathability'],
+        datasets: [{
+          label: 'Rating',
+          data: [90, 85, 80, 75, 88],
+          backgroundColor: 'rgba(0,0,0,0.07)',
+          borderColor: 'rgba(0,0,0,0.8)',
+          borderWidth: 1,
+          pointBackgroundColor: 'rgba(0,0,0,0.8)'
+        }]
+      },
+      options: {
+        scales: {
+          r: {
+            suggestedMin: 0,
+            suggestedMax: 100,
+            ticks: {stepSize: 25, display: false},
+            angleLines: {color: '#e5e5e5'},
+            grid: {color: '#e5e5e5'}
+          }
+        },
+        plugins: {legend: {display: false}}
+      }
+    });
+
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach((el, idx) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease-out, transform 0.7s ease-out';
+      el.style.transitionDelay = `${idx * 120}ms`;
+    });
+    window.addEventListener('load', () => {
+      reveals.forEach(el => {
+        el.style.opacity = 1;
+        el.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Icons
+    lucide.createIcons();
+  </script>
+
+</body></html>
